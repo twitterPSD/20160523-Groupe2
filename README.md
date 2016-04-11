@@ -7,13 +7,15 @@ La stack technique est :
 
 ## Développement
 Avant de pouvoir builder le projet, vous devez installer les dépendances suivantes sur votre machine :
-1. [Node.js][]: We use Node to run a development web server and build the project.
-  Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 
-After installing Node, you should be able to run the following command to install development tools (like
-[Bower][] and [BrowserSync][]). You will only need to run this command when dependencies change in package.json.
+1. [Node.js][]: Nous utilisons Node pour éxécuter le serveur web et contruire le projet.
+En fonction de votre système, vous pouvez installer Node à partir des sources ou d'un binaire packagé.
+
+Après avoir installé Node, vous devriez pouvoir exécuter la commande suivante afin d'installer les outils de développement (comme
+[Bower][] et [BrowserSync][]). Vous avez uniquement besoin de lancer cette commande quand les dépendances dans le fichier package.json changent.
 
   npm install
   
-[Bower]: http://bower.io/
+  
 [Node.js]: https://nodejs.org/
+[Bower]: http://bower.io/
