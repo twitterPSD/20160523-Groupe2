@@ -19,3 +19,4 @@ Après avoir installé Node, vous devriez pouvoir exécuter la commande suivante
   
 [Node.js]: https://nodejs.org/
 [Bower]: http://bower.io/
+[BrowserSync]: http://www.browsersync.io/
