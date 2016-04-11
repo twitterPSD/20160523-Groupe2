@@ -13,4 +13,7 @@ Avant de pouvoir builder le projet, vous devez installer les dépendances suivan
 After installing Node, you should be able to run the following command to install development tools (like
 [Bower][] and [BrowserSync][]). You will only need to run this command when dependencies change in package.json.
 
-    npm install
+  npm install
+  
+[Bower]: http://bower.io/
+[Node.js]: https://nodejs.org/
