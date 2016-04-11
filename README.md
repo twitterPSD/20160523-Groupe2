@@ -8,7 +8,7 @@ La stack technique est :
 ## Développement
 Avant de pouvoir builder le projet, vous devez installer les dépendances suivantes sur votre machine :
 
-1. [Node.js][]: Nous utilisons Node pour éxécuter le serveur web et contruire le projet.
+[Node.js][]: Nous utilisons Node pour éxécuter le serveur web et contruire le projet.
 En fonction de votre système, vous pouvez installer Node à partir des sources ou d'un binaire packagé.
 
 Après avoir installé Node, vous devriez pouvoir exécuter la commande suivante afin d'installer les outils de développement (comme
