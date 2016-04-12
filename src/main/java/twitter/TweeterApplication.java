@@ -10,12 +10,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 
 @SpringBootApplication
-public class TwitterApplication {
+public class TweeterApplication {
 	
-	private static final Logger log = LoggerFactory.getLogger(TwitterApplication.class);
+	private static final Logger log = LoggerFactory.getLogger(TweeterApplication.class);
 
 	public static void main(String[] args) throws UnknownHostException {
-		SpringApplication app = new SpringApplication(TwitterApplication.class);
+		SpringApplication app = new SpringApplication(TweeterApplication.class);
 		Environment env = app.run(args).getEnvironment();
 		log.info("\n----------------------------------------------------------\n\t" +
                 "Application '{}' is running! Access URLs:\n\t" +
