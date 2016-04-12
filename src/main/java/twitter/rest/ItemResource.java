@@ -10,35 +10,35 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import twitter.model.Item;
-import twitter.repository.ItemRepository;
+import twitter.service.ItemService;
 
 @RestController
 @RequestMapping("/items")
 public class ItemResource {
 
 	@Autowired
-	private ItemRepository repo;
+	private ItemService itemService;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public List<Item> findItems() {
-		return repo.findAll();
+		return itemService.findAll();
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
 	public Item addItem(@RequestBody Item item) {
 		item.setId(null);
-		return repo.saveAndFlush(item);
+		return itemService.save(item);
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
 	public Item updateItem(@RequestBody Item updatedItem, @PathVariable Integer id) {
 		updatedItem.setId(id);
-		return repo.saveAndFlush(updatedItem);
+		return itemService.save(updatedItem);
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public void deleteItem(@PathVariable Integer id) {
-		repo.delete(id);
+		itemService.delete(id);
 	}
 
 }
