@@ -2,11 +2,45 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="./bower_components/bootstrap-css-only/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./bower_components/bootstrap-css-only/css/jumbotron.css" />
   </head>
   <body ng-app="myApp">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Tweeter</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    
+    <div class="jumbotron">
+      <div class="container">
+        <h2>Bienvenue</h2>
+        <p>Ceci est l'application d'exemple pour la formation Certified Scrum Developer.</p>
+        <p><a class="btn btn-primary btn-sm" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+    
     <div class="container" ng-controller="AppController">
       <div class="page-header">
-        <h1>Une liste d'items</h1>
+        <h2>Une liste d'items</h2>
       </div>
       <div class="alert alert-info" role="alert" ng-hide="items && items.length > 0">
         Il n'y a aucun item pour le moment
@@ -36,6 +70,12 @@
         </div>
       </form>
     </div>
+    
+    <hr>
+
+      <footer>
+        <p>&copy; 2016 Zenika, Inc.</p>
+      </footer>
     <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
     <script type="text/javascript" src="./bower_components/lodash/dist/lodash.min.js"></script>
