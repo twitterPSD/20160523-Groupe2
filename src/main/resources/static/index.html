@@ -14,9 +14,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Tweeter</a>
+          <a class="navbar-brand" ui-sref="home">Tweeter</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+          	<li><a ui-sref="authors">Authors</a></li>
+          	<li><a ui-sref="items">Items</a></li>
+          </ul>
           <form class="navbar-form navbar-right">
             <div class="form-group">
               <input type="text" placeholder="Email" class="form-control">
@@ -30,6 +34,9 @@
       </div>
     </nav>
     
+    
+    
+    
     <div class="jumbotron">
       <div class="container">
         <h2>Bienvenue</h2>
@@ -38,38 +45,9 @@
       </div>
     </div>
     
-    <div class="container" ng-controller="AppController">
-      <div class="page-header">
-        <h2>Une liste d'items</h2>
-      </div>
-      <div class="alert alert-info" role="alert" ng-hide="items && items.length > 0">
-        Il n'y a aucun item pour le moment
-      </div>
-      <form class="form-horizontal" role="form" ng-submit="addItem(newItem)">
-        <div class="form-group" ng-repeat="item in items">
-          <div class="checkbox col-xs-9">
-            <label>
-              <input type="checkbox" ng-model="item.checked" ng-change="updateItem(item)"/> {{item.description}}
-            </label>
-          </div>
-          <div class="col-xs-3">
-            <button class="pull-right btn btn-danger" type="button" title="Supprimer"
-              ng-click="deleteItem(item)">
-              <span class="glyphicon glyphicon-trash"></span>
-            </button>
-          </div>
-        </div>
-        <hr />
-        <div class="input-group">
-          <input type="text" class="form-control" ng-model="newItem" placeholder="Entrer une description..." />
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="submit" ng-disabled="!newItem" title="Ajouter">
-              <span class="glyphicon glyphicon-plus"></span>
-            </button>
-          </span>
-        </div>
-      </form>
-    </div>
+    <div ui-view></div>
+    
+    
     
     <hr>
 
@@ -78,9 +56,13 @@
       </footer>
     <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="./bower_components/lodash/dist/lodash.min.js"></script>
+    
     <script type="text/javascript" src="./app/app.js"></script>
-    <script type="text/javascript" src="./app/controllers.js"></script>
+    <script type="text/javascript" src="./app/app.state.js"></script>
+    <script type="text/javascript" src="./app/item/item-controller.js"></script>
+    <script type="text/javascript" src="./app/author/author-controller.js"></script>
     <script type="text/javascript" src="./app/services.js"></script>
   </body>
 </html>
