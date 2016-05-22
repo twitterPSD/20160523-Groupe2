@@ -1,6 +1,6 @@
 # tweeter
 
-Cette application a été créer pour servir de sujet de TP à la formation CSD de Zenika.
+Cette application a été créer pour servir de sujet de TP à la formation Scrum Developer de Zenika.
 La stack technique est :
 * Maven
 * Spring Boot
