@@ -24,6 +24,10 @@
         	url:'/author',
         	templateUrl:'app/author/author.html'
         })
+        .state('account',{
+        	url:'/account',
+        	templateUrl:'app/account/account.html'
+        })
         ;
     }
 })();
