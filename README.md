@@ -5,7 +5,7 @@ La stack technique est :
 * Maven
 * Spring Boot
 
-## Développement
+## Développement  
 Avant de pouvoir builder le projet, vous devez installer les dépendances suivantes sur votre machine :
 
 [Node.js][]: Nous utilisons Node pour éxécuter le serveur web et contruire le projet.
