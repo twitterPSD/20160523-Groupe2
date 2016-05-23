@@ -1,31 +1,32 @@
 (function(angular) {
-  var AuthorController = function($scope, Author) {
-	Author.query(function(response) {
-      $scope.authors = response ? response : [];
+  var AccountController = function($scope, Account) {
+	Account.query(function(response) {
+      $scope.accounts = response ? response : [];
     });
     
-    $scope.addAuthor = function(author) {
-      new Author({
-        firstname: author.firstname,
-        lastname: author.lastname,
-        email: author.email
-      }).$save(function(author) {
-        $scope.authors.push(author);
+    $scope.addAccount = function(account) {
+      new Account({
+        firstname: account.firstname,
+        lastname: account.lastname,
+        email: account.email,
+        password: account.password
+      }).$save(function(account) {
+        $scope.accounts.push(account);
       });
-      $scope.newAuthor = "";
+      $scope.newAccount = "";
     };
     
-    $scope.updateAuthor = function(author) {
-      author.$update();
+    $scope.updateAccount = function(account) {
+      account.$update();
     };
     
-    $scope.deleteAuthor = function(author) {
-      author.$remove(function() {
-        $scope.authors.splice($scope.authors.indexOf(author), 1);
+    $scope.deleteAccount = function(account) {
+      account.$remove(function() {
+        $scope.accounts.splice($scope.accounts.indexOf(account), 1);
       });
     };
   };
   
-  AuthorController.$inject = ['$scope', 'Author'];
-  angular.module("myApp.controllers").controller("AuthorController", AuthorController);
+  AccountController.$inject = ['$scope', 'Account'];
+  angular.module("myApp.controllers").controller("AccountController", AccountController);
 }(angular));

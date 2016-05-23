@@ -1,41 +1,39 @@
-<div class="container" ng-controller="AuthorController">
+<div class="container" ng-controller="AccountController">
 	<div class="page-header">
-		<h2>Liste des Auteurs</h2>
+		<h2>Créer un nouveau compte</h2>
 	</div>
-	<div class="alert alert-info" role="alert"
-		ng-hide="authors && authors.length > 0">Il n'y a aucun Auteur pour le
-		moment</div>
+
 		
-	<form class="form-horizontal" role="form" ng-submit="addAuthor(newAuthor)">
-        <div class="form-group" ng-repeat="author in authors">
+	<form class="form-horizontal" role="form" ng-submit="addAccount(newAccount)">
+        <div class="form-group" ng-repeat="account in accounts">
           <div class="checkbox col-xs-9">
             <label>
-            	{{author.id}}
+              {{account.email}}
             </label>
             <label>
-              {{author.email}}
-            </label>
-            <label>
-              {{author.firstname}}
+              {{account.firstname}}
             </label>
              <label>
-              {{author.lastname}}
+              {{account.lastname}}
+            </label>
+            <label>
+              {{account.password}}
             </label>
           </div>
           <div class="col-xs-3">
             <button class="pull-right btn btn-danger" type="button" title="Supprimer"
-              ng-click="deleteAuthor(author)">
+              ng-click="deleteAccount(account)">
               <span class="glyphicon glyphicon-trash"></span>
             </button>
           </div>
         </div>
         <hr />
         <div class="input-group">
-          <input type="text" class="form-control" ng-model="newAuthor.email" placeholder="email@domain.com..." />
-          <input type="text" class="form-control" ng-model="newAuthor.firstname"  placeholder="Firstname..." />
-          <input type="text" class="form-control" ng-model="newAuthor.lastname"  placeholder="Lastname..." />
+          <input type="text" class="form-control" ng-model="newAccount.email" placeholder="email@domain.com..." />
+          <input type="text" class="form-control" ng-model="newAccount.firstname"  placeholder="Firstname..." />
+          <input type="text" class="form-control" ng-model="newAccount.lastname"  placeholder="Lastname..." />
           <span class="input-group-btn">
-            <button class="btn btn-default" type="submit" ng-disabled="!newAuthor.email" title="Ajouter">
+            <button class="btn btn-default" type="submit" ng-disabled="!newAccount.email" title="Ajouter">
               <span class="glyphicon glyphicon-plus"></span>
             </button>
           </span>
